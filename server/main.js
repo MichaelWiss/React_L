@@ -10,6 +10,7 @@ Meteor.startup(() => {
  
   //see if collection has any records
   const numberRecords = Employees.find({}).count();
+  console.log(numberRecords);
   if (!numberRecords) {
   	 //generate data
   	 _.times(5000, () => {
