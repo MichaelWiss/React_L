@@ -12,12 +12,12 @@ class EmployeeList extends Component {
   }
 
   handleButtonClick(){
-    Meteor.subscribe('employees', PER_PAGE * this.page );
+    Meteor.subscribe('employees', PER_PAGE * (this.page + 1));
     this.page +=1;
   }
   render(){
   //props.employees => an array of objescts
-	console.log(props.employees);
+	console.log(this.employees);
   	return (
           <div> 
             <div className="employee-list">
